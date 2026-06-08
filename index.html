@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Portfolio Website Using HTML & CSS | Codehal</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="#" class="logo">Portfolio.</a>
+
+      <i class="bx bx-menu menu-icon"></i>
+
+      <ul class="nav-links">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="skills">Skills</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="overlay"></div>
+
+    <section class="home">
+      <div class="home-info">
+        <h1>Pradeep Kamble</h1>
+        <h2>
+          I'm a
+          <span style="--i: 4" data-text="Frontend Developer"
+            >Frontend Developer
+          </span>
+          <span style="--i: 3" data-text="Backend Developer"
+            >Backend Developer</span
+          >
+          <span style="--i: 2" data-text="Full-Stack Developer"
+            >Full-Stack Developer</span
+          >
+          <span style="--i: 1" data-text="MERN Developer">MERN Developer</span>
+        </h2>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. At
+          repudiandae tenetur id earum! Obcaecati rerum eum, voluptatibus quidem
+          officiis eligendi molestias, dolorem repellat exercitationem beatae
+          quis, quod quibusdam asperiores odit.
+        </p>
+        <div class="btn-sci">
+          <a href="#" class="btn">Download CV</a>
+          <div class="sci">
+            <a href="#"><i class="bx bxl-github"></i></a>
+            <a href="#"><i class="bx bxl-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="home-img">
+        <div class="img-box">
+          <!--This img-item class will be used to manipulate the background color to cover the border animation -->
+          <div class="img-item">
+            <img src="/assets/images/home.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="skills" class="skills alt">
+      <div>
+        <h2>Skills</h2>
+        <div class="skill-box">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>Javascript</span>
+          <span>MERN</span>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const menuIcon = document.querySelector(".menu-icon");
+        const navLinks = document.querySelector(".nav-links");
+        const overlay = document.querySelector(".overlay");
+
+        menuIcon.addEventListener("click", () => {
+          navLinks.classList.toggle("active");
+          overlay.classList.toggle("active");
+
+          menuIcon.classList.toggle("bx-menu");
+          menuIcon.classList.toggle("bx-x");
+        });
+
+        overlay.addEventListener("click", () => {
+          navLinks.classList.remove("active");
+          overlay.classList.remove("active");
+
+          menuIcon.classList.add("bx-menu");
+          menuIcon.classList.remove("bx-x");
+        });
+      });
+    </script>
+  </body>
+</html>
