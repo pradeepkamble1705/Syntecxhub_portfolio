@@ -1,14 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 
-:root{
-    --bg-main: #0f172a;
-    --bg-dark: #020617;
-    --primary: #38bdf8;
-    --secondary: #6366f1;
-    --text-main: #e5e7eb;
-    --glass:rgba(255,255,255,0.08);
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -39,6 +30,7 @@ a {
     opacity: 0;
     animation: show-content 1.5s linear forwards;
     animation-delay: 1.2s;
+    background: #1f242d;
 }
 
 @keyframes show-content {
@@ -264,50 +256,6 @@ a {
     width: 100%;
     object-fit: cover;
     mix-blend-mode: lighten;
-}
-
-
-.skills{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 50vh;
-    vertical-align: middle;
-}
-
-.skills div {
-    width: 100%;
-    text-align: center;
-}
-
-.skills h2{
-    font-size: 2.2rem;
-    margin-bottom: 20px;
-    color: #4889fa;
-}
-
-.alt {
-    background: var(--bg-dark);
-}
-
-.skill-box {
-    margin-top: 30px;
-}
-
-.skill-box span {
-    display: inline-block;
-    margin: 10px;
-    padding: 12px 24px;
-    background: var(--glass);
-    border-radius: 30px;
-    backdrop-filter: blur(10x);
-    transition: all 0.3s ease;
-}
-
-.skill-box span:hover {
-    background: #4889fa;
-    color: #1f242d;
-    transform: translateY(-6px);
 }
 
 
